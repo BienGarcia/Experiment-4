@@ -1,0 +1,103 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+using namespace std;
+int addition (int a, int b)
+{
+int r;
+r=a+b;
+return r;
+}
+
+int subtraction (int a, int b)
+{
+int r;
+r=a-b;
+return r;
+}
+
+int multiplication (int a, int b)
+{
+int r;
+r=a*b;
+return r;
+}
+
+int division (int a, int b)
+{
+int r;
+r=a/b;
+return r;
+}
+
+int mod (int a, int b)
+{
+int r;
+r =a%b;
+return r;
+}
+
+int main ()
+{
+int z, x, y, choice;
+
+cout << "MENU: " << endl;
+cout << "1. Add" << endl;
+cout << "2. Subtract" << endl;
+cout << "3. Multiply" << endl;
+cout << "4. Divide" << endl;
+cout << "5. Modulus" << endl;
+
+cout << endl;
+
+
+cout << "Enter two numbers: "; cin >> x >> y;           
+cout << "Enter a choice: "; cin >> choice;
+
+switch (choice)
+{
+	case 1:
+		{
+			z = addition (x,y);
+			cout << "The result is " << z;
+			break;
+		}
+		
+	case 2:
+		{
+			z = subtraction (x,y);
+			cout << "The result is " << z;
+			break;
+		}
+		
+	case 3:
+		{
+			z = multiplication (x,y);
+			cout << "The result is " << z;
+			break;
+		}
+		
+	case 4:
+		{
+			z = division (x,y);
+			cout << "The result is " << z;
+			break;
+		}
+	case 5:
+		{ 
+			z = mod (x,y);
+			cout << "The result is " << z;
+			break;
+		}
+		
+	default:
+		{
+			cout << "Wrong!";
+		}
+		
+}
+
+
+getch();
+return 0;
+}
