@@ -1,10 +1,12 @@
+
 #include <iostream>
 #include <conio.h>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 int addition (int a, int b)
 {
-int r;
+double r;
 r=a+b;
 return r;
 }
@@ -39,8 +41,12 @@ return r;
 
 int main ()
 {
-int z, x, y, choice;
+int x, w, choice;
+char again = 'y';
+double z;
 
+while (again == 'y')
+	{
 cout << "MENU: " << endl;
 cout << "1. Add" << endl;
 cout << "2. Subtract" << endl;
@@ -51,42 +57,42 @@ cout << "5. Modulus" << endl;
 cout << endl;
 
 
-cout << "Enter two numbers: "; cin >> x >> y;           
+cout << "Enter two numbers: "; cin >> x >> w;           
 cout << "Enter a choice: "; cin >> choice;
 
 switch (choice)
 {
 	case 1:
 		{
-			z = addition (x,y);
+			z = addition (x,w);
 			cout << "The result is " << z;
 			break;
 		}
 		
 	case 2:
 		{
-			z = subtraction (x,y);
+			z = subtraction (x,w);
 			cout << "The result is " << z;
 			break;
 		}
 		
 	case 3:
 		{
-			z = multiplication (x,y);
+			z = multiplication (x,w);
 			cout << "The result is " << z;
 			break;
 		}
 		
 	case 4:
 		{
-			z = division (x,y);
+			z = division (x,w);
 			cout << "The result is " << z;
 			break;
 		}
 	case 5:
 		{ 
-			z = mod (x,y);
-			cout << "The result is " << z;
+			z = mod (x,w);
+			cout << "The result is " << setprecision(2) << z;
 			break;
 		}
 		
@@ -97,6 +103,13 @@ switch (choice)
 		
 }
 
+cout << endl;
+
+cout << "Continue?(type y if yes)";
+		cin >> again;
+		cout << endl;
+
+	}
 
 getch();
 return 0;
