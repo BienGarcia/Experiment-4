@@ -1,0 +1,43 @@
+    
+#include <iostream>
+#include <conio.h>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+int size, num[100], x, y, z;
+
+cout << "Selection Sorting..." << endl;
+cout << "Enter the array size: "; 
+cin >> size;
+
+cout << "Enter the " << size << " elements: " << endl;  
+
+for (x=0; x<size; x++)
+{
+cin >> num[x];
+}
+	
+cout << "Your data: ";
+
+for (x=0; x<size; x++)
+{
+cout << num[x] << " ";
+}
+
+sort (num, num+size);
+
+cout << endl;
+cout << "After using selection sort... or bubble sort..." << endl;
+cout << "Sorted data: ";
+for (x=0; x<size; x++)
+{
+	cout << num[x] << " ";
+}
+
+
+_getch();
+return 0;
+}
